@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "935351172107",
+    "firebase_url": "https://coatcheck-eb890.firebaseio.com",
+    "project_id": "coatcheck-eb890",
+    "storage_bucket": "coatcheck-eb890.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:935351172107:android:135fe2810b0d28302adb0e",
+        "android_client_info": {
+          "package_name": "bqt.android.coatcheck"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "935351172107-8clocqkejq0a0ie9fc7hnqhbvncrh2q4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "bqt.android.coatcheck",
+            "certificate_hash": "424bac553a0672889bafe886ad71dbe952537e77"
+          }
+        },
+        {
+          "client_id": "935351172107-dv9t8ou1q3n6eiufqff0fc7odhihn0d7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCQez2zXTVKu9S8puHIv_bLKSXppeQ6vJ0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "935351172107-dv9t8ou1q3n6eiufqff0fc7odhihn0d7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

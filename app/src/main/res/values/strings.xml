@@ -1,3 +1,37 @@
 <resources>
-    <string name="app_name">CoatCheck</string>
+    <string name="app_name" translatable="false">CoatCheck</string>
+    <string name="app_title" translatable="false">COAT CHECK</string>
+    <string name="logo" translatable="false">CC</string>
+    <string name="search">Search</string>
+    <string name="closet">Closet</string>
+    <string name="my_account">My Account</string>
+    <string name="tops">Tops</string>
+    <string name="bottoms">Bottoms</string>
+    <string name="outerwear">Outerwear</string>
+    <string name="dresses">Dresses</string>
+    <string name="shoes">Shoes</string>
+    <string name="accessories">Accessories</string>
+    <string name="add_to_closet">Add To Closet</string>
+    <string name="add_to_tops">Add To Tops</string>
+    <string name="add_to_bottoms">Add To Bottoms</string>
+    <string name="add_to_dresses">Add To Dresses</string>
+    <string name="add_to_Outerwear">Add To Outerwear</string>
+    <string name="add_to_shoes">Add To Shoes</string>
+    <string name="add_to_accessories">Add To Accessories</string>
+    <string name="add_to_outfits">Add To Outfits</string>
+    <string name="enter_your_email">Enter your email address</string>
+    <string name="password_8_20_characters">Password (8–20 characters)</string>
+    <string name="email">Email Address</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="forgot_password">Forgot password?</string>
+    <string name="register">Register</string>
+    <string name="size">Size</string>
+    <string name="condition">Condition</string>
+    <string name="color">Color</string>
+    <string name="acquired_date">Acquired Date</string>
+    <string name="number_of_wears">Number of Wears</string>
+    <string name="season">Season</string>
+    <string name="tags">Tags</string>
+    <string name="coat_check_logo">The logo for CoatCheck</string>
 </resources>
