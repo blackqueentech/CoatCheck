@@ -1,11 +1,34 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:textColor">@color/textColorPrimary</item>
+        <item name="android:textColorSecondary">@color/textColorSecondary</item>
+        <item name="android:colorBackground">@color/backgroundColor</item>
+        <item name="android:color">@color/colorButton</item>
+        <item name="android:textColorTertiary">@color/textColorSearch</item>
+    </style>
+
+    <style name="TextAppearance.Title" parent="@android:style/TextAppearance">
+        <item name="android:fontFamily">@font/poppins_semi_bold</item>
+    </style>
+
+    <style name="TextAppearance.Tag" parent="android:TextAppearance">
+        <item name="android:textSize">36sp</item>
+        <item name="android:fontFamily">fonts/alata_regular.ttf</item>
+    </style>
+
+    <style name="TextAppearance.Brand" parent="@android:style/TextAppearance">
+        <item name="android:fontFamily">@font/josefin_sans_reg</item>
+    </style>
+
+    <style name="TextAppearance.Details" parent="@android:style/TextAppearance">
+        <item name="android:fontFamily">@font/open_sans_italic</item>
+    </style>
+
+    <style name="TextAppearance.Cost" parent="@android:style/TextAppearance">
+        <item name="android:fontFamily">@font/source_sans_pro_semi_bold</item>
     </style>
 
 </resources>
