@@ -11,7 +11,7 @@
     </style>
 
     <style name="TextAppearance.Title" parent="@android:style/TextAppearance">
-        <item name="android:fontFamily">@font/poppins_semi_bold</item>
+        <item name="android:fontFamily">@font/sifonn_regular</item>
     </style>
 
     <style name="TextAppearance.Tag" parent="android:TextAppearance">
