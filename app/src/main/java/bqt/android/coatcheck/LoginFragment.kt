@@ -1,5 +1,6 @@
 package bqt.android.coatcheck
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -46,15 +47,14 @@ class LoginFragment : Fragment() {
     }
 
     private fun signIn (view: View, email: String, password: String) {
-//        auth.signInWithEmailAndPassword(email, password).addOnCompleteListener(context, new OnCompleteListener<AuthResult>() {
-//            @Override
-//            public void onComplete(@NonNull (Task<AuthResult>) task) {
-//                if (task.isSuccessful) {
-//                goToCloset()
-//            } else {
-//                showMessage(view, "Error: ${task.exception?.message}")
-//            }
-//        }}
+        auth.signInWithEmailAndPassword(email, password).addOnCompleteListener(requireActivity(),
+            OnCompleteListener<AuthResult> { task ->
+            if(task.isSuccessful){
+                goToCloset()
+            } else{
+                showMessage(view,"Error: ${task.exception?.message}")
+            }
+        })
     }
 
     private fun showMessage(view:View, message: String){
@@ -71,7 +71,9 @@ class LoginFragment : Fragment() {
     }
 
     private fun goToCloset() {
-        Navigation.createNavigateOnClickListener(R.id.closet_dest)
+        var intent = Intent(requireActivity(), ClosetActivity::class.java)
+        intent.putExtra("id", auth.currentUser?.email)
+        startActivity(intent)
     }
 }
 

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/closet_nav_graph"
+    app:startDestination="@id/closet_dest">
+
+    <fragment
+        android:id="@+id/tops_category_dest"
+        android:name="bqt.android.coatcheck.CategoryFragment"
+        android:label="@string/tops"
+        tools:layout="@layout/tops_category_fragment">
+        <action
+            android:id="@+id/back_to_closet_action"
+            app:destination="@+id/closet_dest">
+        </action>
+        <argument
+            android:name="closetCategory"
+            app:argType="string"
+            android:defaultValue="Tops" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/bottoms_category_dest"
+        android:name="bqt.android.coatcheck.CategoryFragment"
+        android:label="@string/bottoms"
+        tools:layout="@layout/bottoms_category_fragment">
+        <action
+            android:id="@+id/back_to_closet_action"
+            app:destination="@+id/closet_dest">
+        </action>
+        <argument
+            android:name="closetCategory"
+            app:argType="string"
+            android:defaultValue="Bottoms" />
+    </fragment>
+    <fragment
+        android:id="@+id/closet_dest"
+        android:name="bqt.android.coatcheck.ClosetFragment"
+        android:label="@string/closet"
+        tools:layout="@layout/fragment_closet" >
+        <action
+            android:id="@+id/next_action"
+            app:destination="@id/tops_category_dest"
+            app:enterAnim="@anim/fui_slide_in_right"
+            app:exitAnim="@anim/fui_slide_out_left"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+    </fragment>
+</navigation>

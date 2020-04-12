@@ -15,10 +15,8 @@ class SplashActivity : AppCompatActivity() {
         val host: NavHostFragment = supportFragmentManager
             .findFragmentById(R.id.nav_host_fragment) as NavHostFragment? ?: return
 
-        val navController = host.navController
-
-        var intent = Intent(this, EmailPasswordActivity::class.java)
-        startActivity(intent)
+//        var intent = Intent(this, EmailPasswordActivity::class.java)
+//        startActivity(intent)
     }
 
     override fun onSupportNavigateUp(): Boolean {

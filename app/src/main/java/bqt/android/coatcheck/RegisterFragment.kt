@@ -1,5 +1,6 @@
 package bqt.android.coatcheck
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
@@ -9,6 +10,9 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
+import com.google.android.gms.tasks.OnCompleteListener
+import com.google.android.material.snackbar.Snackbar
+import com.google.firebase.auth.AuthResult
 import com.google.firebase.auth.FirebaseAuth
 
 /**
@@ -43,22 +47,23 @@ class RegisterFragment : Fragment() {
     }
 
     private fun registerUser(view: View, email: String, password: String) {
-       // auth.createUserWithEmailAndPassword(email, password).addOnCompleteListener()
-
-//            .addOnCompleteListener(context, new OnComp) { task ->
-//                if (task.isSuccessful) {
-//                    // Sign in success, update UI with the signed-in user's information
-//                    val user = auth.currentUser
-//                    updateUI(user)
-//                } else {
-//                    // If sign in fails, display a message to the user.
-//                    Toast.makeText(baseContext, "Authentication failed.",
-//                        Toast.LENGTH_SHORT).show()
-//                    updateUI(null)
-//                }
-//
-//                // ...
-//            }
+        auth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(requireActivity(),
+            OnCompleteListener<AuthResult> { task ->
+                if(task.isSuccessful){
+                    goToCloset()
+                } else{
+                    showMessage(view,"Error: ${task.exception?.message}")
+                }
+            })
     }
 
+    private fun showMessage(view:View, message: String){
+        Snackbar.make(view, message, Snackbar.LENGTH_INDEFINITE).setAction("Action", null).show()
+    }
+
+    private fun goToCloset() {
+        var intent = Intent(requireActivity(), ClosetActivity::class.java)
+        intent.putExtra("id", auth.currentUser?.email)
+        startActivity(intent)
+    }
 }

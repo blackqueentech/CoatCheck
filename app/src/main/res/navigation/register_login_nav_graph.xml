@@ -24,8 +24,4 @@
         android:name="bqt.android.coatcheck.RegisterFragment"
         android:label="fragment_register"
         tools:layout="@layout/fragment_register" />
-    <activity
-        android:id="@+id/splashActivity2"
-        android:name="bqt.android.coatcheck.SplashActivity"
-        android:label="SplashActivity" />
 </navigation>
