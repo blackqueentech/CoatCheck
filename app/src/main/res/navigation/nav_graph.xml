@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splash_dest">
+
+    <activity
+        android:id="@+id/splash_dest"
+        android:name="bqt.android.coatcheck.SplashActivity"
+        android:label="SplashActivity" >
+    </activity>
+
+    <activity
+        android:id="@+id/closet_dest"
+        android:name="bqt.android.coatcheck.ClosetActivity"
+        android:label="activity_closet"
+        tools:layout="@layout/activity_closet" />
+    <activity
+        android:id="@+id/activity_login_dest"
+        android:name="bqt.android.coatcheck.EmailPasswordActivity"
+        android:label="activity_email_password"
+        tools:layout="@layout/activity_email_password" >
+    </activity>
+</navigation>

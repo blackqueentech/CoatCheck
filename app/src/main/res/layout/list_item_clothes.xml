@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/clothes_image"
+        android:layout_width="@dimen/icon_size"
+        android:layout_height="60dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@drawable/ic_arrow_down_coral_24dp" />
+
+    <TextView
+        android:id="@+id/clothes_brand"
+        android:layout_width="197dp"
+        android:layout_height="19dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp"
+        android:textAppearance="@style/TextAppearance.Brand"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.081"
+        app:layout_constraintStart_toEndOf="@+id/clothes_image"
+        app:layout_constraintTop_toTopOf="@+id/clothes_image"
+        tools:text="Kate Spade" />
+
+    <TextView
+        android:id="@+id/clothes_size"
+        android:layout_width="68dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:textAppearance="@style/TextAppearance.Brand"
+        app:layout_constraintStart_toEndOf="@+id/clothes_image"
+        app:layout_constraintTop_toBottomOf="@+id/clothes_title"
+        tools:text="S" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="172dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintStart_toEndOf="@+id/clothes_size"
+        app:layout_constraintTop_toBottomOf="@+id/clothes_price"
+        app:srcCompat="@drawable/ic_color_blue" />
+
+    <TextView
+        android:id="@+id/clothes_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:text="$63"
+        android:textAppearance="@style/TextAppearance.Brand"
+        app:layout_constraintBaseline_toBaselineOf="@+id/clothes_brand"
+        app:layout_constraintStart_toEndOf="@+id/clothes_brand" />
+
+    <TextView
+        android:id="@+id/clothes_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="Denim Farm Blouse"
+        android:textAppearance="@style/TextAppearance.Title"
+        app:layout_constraintStart_toEndOf="@+id/clothes_image"
+        app:layout_constraintTop_toBottomOf="@+id/clothes_brand" />
+</androidx.constraintlayout.widget.ConstraintLayout>

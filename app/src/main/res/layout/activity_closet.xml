@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ClosetActivity">
+
+    <TextView
+        android:id="@+id/bottoms_option"
+        android:layout_width="81dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="36dp"
+        android:text="@string/bottoms"
+        android:textAppearance="@style/TextAppearance.Title"
+        android:textColor="@color/textColorPrimary"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@+id/tops_option"
+        tools:layout_editor_absoluteX="46dp" />
+
+    <TextView
+        android:id="@+id/outerwear_option"
+        android:layout_width="105dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="36dp"
+        android:text="@string/outerwear"
+        android:textAppearance="@style/TextAppearance.Title"
+        android:textColor="@color/textColorPrimary"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@+id/bottoms_option"
+        tools:layout_editor_absoluteX="46dp" />
+
+    <TextView
+        android:id="@+id/dresses_option"
+        android:layout_width="73dp"
+        android:layout_height="21dp"
+        android:layout_marginTop="49dp"
+        android:text="@string/dresses"
+        android:textAppearance="@style/TextAppearance.Title"
+        android:textColor="@color/textColorPrimary"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@+id/outerwear_option"
+        tools:layout_editor_absoluteX="46dp" />
+
+    <TextView
+        android:id="@+id/shoes_option"
+        android:layout_width="61dp"
+        android:layout_height="23dp"
+        android:layout_marginTop="56dp"
+        android:text="@string/shoes"
+        android:textAppearance="@style/TextAppearance.Title"
+        android:textColor="@color/textColorPrimary"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@+id/dresses_option"
+        tools:layout_editor_absoluteX="46dp" />
+
+    <TextView
+        android:id="@+id/accessories_option"
+        android:layout_width="120dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="44dp"
+        android:text="@string/accessories"
+        android:textAppearance="@style/TextAppearance.Title"
+        android:textColor="@color/textColorPrimary"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@+id/shoes_option"
+        tools:layout_editor_absoluteX="46dp" />
+
+    <TextView
+        android:id="@+id/logo_closet"
+        android:layout_width="128dp"
+        android:layout_height="74dp"
+        android:layout_marginTop="40dp"
+        android:text="CC"
+        android:textAlignment="viewStart"
+        android:textAppearance="@style/TextAppearance.Logo"
+        android:textColor="@color/textColorPrimary"
+        android:textSize="70sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.127"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tops_option"
+        android:layout_width="46dp"
+        android:layout_height="30dp"
+        android:text="@string/tops"
+        android:textAppearance="@style/TextAppearance.Title"
+        android:textColor="@color/textColorPrimary"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="46dp"
+        tools:layout_editor_absoluteY="197dp" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="217dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/add_to_closet"
+        android:background="@color/textColorPrimary"
+        android:textAppearance="@style/TextAppearance.Brand"
+        android:textColor="@color/backgroundColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/accessories_option" />
+
+    <EditText
+        android:id="@+id/search_closet"
+        android:layout_width="329dp"
+        android:layout_height="42dp"
+        android:layout_marginBottom="2dp"
+        android:textColor="@color/textColorSearch"
+        android:drawableLeft="@drawable/ic_search_dark_tan_24dp"
+        android:ems="10"
+        android:fontFamily="@font/alata_regular"
+        android:inputType="textPersonName"
+        android:text="@string/search"
+        app:layout_constraintBottom_toTopOf="@+id/tops_option"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.439"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo_closet"
+        app:layout_constraintVertical_bias="0.358" />
+</androidx.constraintlayout.widget.ConstraintLayout>
