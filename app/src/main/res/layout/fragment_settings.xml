@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SettingsFragment">
+
+
+    <TextView
+        android:id="@+id/choose_categories_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/category_selections"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.153"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/currency_selection_text" />
+
+    <Spinner
+        android:id="@+id/currency_spinner"
+        android:layout_width="113dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="156dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/currency_selection_text"
+        app:layout_constraintTop_toBottomOf="@+id/display_name_edit" />
+
+    <TextView
+        android:id="@+id/currency_selection_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="44dp"
+        android:text="@string/currency_selection"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/update_name_text" />
+
+    <Button
+        android:id="@+id/logout_button"
+        android:layout_width="173dp"
+        android:layout_height="37dp"
+        android:layout_marginBottom="68dp"
+        android:background="@color/textColorPrimary"
+        android:text="@string/logout"
+        android:textAppearance="@style/TextAppearance.Brand"
+        android:textColor="@color/backgroundColor"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.487"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/save_button" />
+
+    <CheckBox
+        android:id="@+id/dresses_check_box"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:text="@string/dresses"
+        app:layout_constraintBaseline_toBaselineOf="@+id/bottoms_check_box"
+        app:layout_constraintStart_toEndOf="@+id/bottoms_check_box" />
+
+    <CheckBox
+        android:id="@+id/bottoms_check_box"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text="@string/bottoms"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tops_check_box"
+        app:layout_constraintStart_toEndOf="@+id/tops_check_box" />
+
+    <CheckBox
+        android:id="@+id/outerwear_check_box"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="@string/outerwear"
+        app:layout_constraintBaseline_toBaselineOf="@+id/accessories_check_box"
+        app:layout_constraintStart_toEndOf="@+id/shoes_check_box" />
+
+    <CheckBox
+        android:id="@+id/shoes_check_box"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:text="@string/shoes"
+        app:layout_constraintBaseline_toBaselineOf="@+id/outerwear_check_box"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <CheckBox
+        android:id="@+id/tops_check_box"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/tops"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toStartOf="@+id/bottoms_check_box"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/choose_categories_text" />
+
+    <CheckBox
+        android:id="@+id/accessories_check_box"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/accessories"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/outerwear_check_box"
+        app:layout_constraintTop_toBottomOf="@+id/dresses_check_box" />
+
+    <TextView
+        android:id="@+id/update_name_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="136dp"
+        android:text="@string/update_display_name"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/display_name_edit"
+        android:layout_width="116dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="108dp"
+        android:layout_marginEnd="32dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name"
+        app:layout_constraintBaseline_toBaselineOf="@+id/update_name_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/update_name_text" />
+
+    <Button
+        android:id="@+id/save_button"
+        android:layout_width="173dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="524dp"
+        android:background="@color/textColorPrimary"
+        android:text="@string/save"
+        android:textAppearance="@style/TextAppearance.Brand"
+        android:textColor="@color/backgroundColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.487"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -26,11 +26,13 @@
     <string name="email">Email Address</string>
     <string name="password">Password</string>
     <string name="login">Login</string>
+    <string name="logout">Log Out</string>
     <string name="forgot_password">Forgot password?</string>
     <string name="register">Register</string>
     <string name="sign_up">Sign Up</string>
     <string name="sign_in">Sign In</string>
     <string name="size">Size</string>
+    <string name="save">Save</string>
     <string name="condition">Condition</string>
     <string name="color">Color</string>
     <string name="acquired_date">Acquired Date</string>
@@ -38,6 +40,15 @@
     <string name="season">Season</string>
     <string name="tags">Tags</string>
     <string name="coat_check_logo">The logo for CoatCheck</string>
+    <string name="currency_selection">Select Currency</string>
+    <string name="category_selections">Choose Closet categories</string>
+    <string name="update_display_name">Update Display Name</string>
+    
+    <string-array name="currency_list">
+        <item>$ - USD</item>
+        <item>€ - EUR</item>
+        <item>£ - GBP</item>
+    </string-array>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

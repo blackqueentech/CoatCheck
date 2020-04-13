@@ -12,6 +12,7 @@ android {
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"
+        multiDexEnabled true
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -57,6 +58,11 @@ dependencies {
 
     // Testing Navigation
     androidTestImplementation "androidx.navigation:navigation-testing:$nav_version"
+
+    // Firebase Firestore Database
+    implementation 'com.google.firebase:firebase-firestore-ktx:21.4.2'
+
+    implementation 'com.android.support:multidex:1.0.3'
 
 
 }

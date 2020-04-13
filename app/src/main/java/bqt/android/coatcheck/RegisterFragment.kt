@@ -14,12 +14,19 @@ import com.google.android.gms.tasks.OnCompleteListener
 import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.auth.AuthResult
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.firestore.ktx.firestore
+import com.google.firebase.ktx.Firebase
 
 /**
  *
  */
 class RegisterFragment : Fragment() {
+
+    private val TAG = "RegisterFragment"
     private lateinit var auth: FirebaseAuth
+
+    val db = Firebase.firestore
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -50,6 +57,7 @@ class RegisterFragment : Fragment() {
         auth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(requireActivity(),
             OnCompleteListener<AuthResult> { task ->
                 if(task.isSuccessful){
+                    addNewUserToDatabase(email)
                     goToCloset()
                 } else{
                     showMessage(view,"Error: ${task.exception?.message}")
@@ -59,6 +67,23 @@ class RegisterFragment : Fragment() {
 
     private fun showMessage(view:View, message: String){
         Snackbar.make(view, message, Snackbar.LENGTH_INDEFINITE).setAction("Action", null).show()
+    }
+
+    private fun addNewUserToDatabase(email: String) {
+        val user = hashMapOf(
+            "email" to email,
+            "currency" to null,
+            "categories" to listOf("Tops", "Bottoms", "Outerwear", "Shoes")
+        )
+
+        db.collection("users")
+            .add(user)
+            .addOnSuccessListener { documentReference ->
+                Log.d(TAG, "DocumentSnapshot added with ID: ${documentReference.id}")
+            }
+            .addOnFailureListener { e ->
+                Log.w(TAG, "Error adding document", e)
+            }
     }
 
     private fun goToCloset() {
